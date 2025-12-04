@@ -105,3 +105,16 @@ java -jar roombookingsystem-rest-api/target/roombookingsystem-rest-api-1.0.0-SNA
 ```
 
 
+#### Deps
+
+vfox
+─┬java
+│ └──v25.0.1+8
+┬maven
+│ └──v4.0.0-rc-5
+
+.zshrc
+
+### vFox (versionFox)
+eval "$(vfox activate zsh)"
+

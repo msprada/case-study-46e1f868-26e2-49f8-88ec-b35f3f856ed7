@@ -1,3 +1,5 @@
+package de.vidaee.roombookingsystem.user;
+
 public class User {
     private String id;
     private String firstname;
@@ -14,6 +16,6 @@ public class User {
     }
 
     public String getName(){
-        return this.name;
+        return this.firstname + this.lastname;
     }
 }

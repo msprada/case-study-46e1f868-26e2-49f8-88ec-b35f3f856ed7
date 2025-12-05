@@ -25,7 +25,7 @@
     </dependency>
   </dependencies>
   <modules>
-    <module>roombookingsystem-domain</module>
+    <module>room-booking-system-domain</module>
     <module>roombookingsystem-rest-api</module>
     <module>roombookingsystem-data</module>
   </modules>

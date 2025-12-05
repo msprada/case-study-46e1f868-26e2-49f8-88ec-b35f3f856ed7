@@ -1,7 +1,36 @@
 package de.vidaee.roombookingsystem;
 
-import de.vidaee.roombookingsystem.user.IUserRepository;
 
-public class UserRepository {
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+
+
+
+@Repository
+public class UserRepository implements IUserRepository {
+
+    @Override
+  public List<User> list() {
+       return Arrays.asList(new User("John", "Smith"), new User("John", "Doe"));
+   }
+
+   @Override
+   public User get(Long id) {
+      throw new UnsupportedOperationException("Feature incomplete. Contact assistance.");
+   }
+
+   @Override
+   public void save(User user) { 
+throw new UnsupportedOperationException("Feature incomplete. Contact assistance.");
+   }
+
+   @Override
+   public void delete(Long aLong) { 
+    throw new UnsupportedOperationException("Feature incomplete. Contact assistance.");
+   }
     
 }
+

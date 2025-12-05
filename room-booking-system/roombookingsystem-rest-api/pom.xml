@@ -13,6 +13,8 @@
   <version>1.0.0-SNAPSHOT</version>
   <name>roombookingsystem-rest-api</name>
   <url>http://maven.apache.org</url>
+
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -35,6 +37,12 @@
       <groupId>de.vidaee.roombookingsystem</groupId>
       <artifactId>roombookingsystem-domain</artifactId>
       <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>de.vidaee.roombookingsystem</groupId>
+      <artifactId>roombookingsystem-data</artifactId>
+      <version>${project.version}</version>
+      <scope>runtime</scope>
     </dependency>
 
   </dependencies>

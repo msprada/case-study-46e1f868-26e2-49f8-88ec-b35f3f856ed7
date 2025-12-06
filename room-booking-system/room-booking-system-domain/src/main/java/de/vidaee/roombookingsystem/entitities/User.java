@@ -1,4 +1,4 @@
-package de.vidaee.roombookingsystem;
+package de.vidaee.roombookingsystem.entitities;
 
 public class User {
     private String id;

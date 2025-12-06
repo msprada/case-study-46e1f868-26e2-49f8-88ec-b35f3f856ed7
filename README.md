@@ -29,6 +29,7 @@ Onion-Architecture
 - Spring Data JDBC als Persistence-Layer
 - Postgresql als Datenbank
 - Data Migration Tool nicht notwendig
+
 **Optional**:
 - Frontend mit Angular...
 

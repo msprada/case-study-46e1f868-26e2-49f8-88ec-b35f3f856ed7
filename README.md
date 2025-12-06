@@ -69,7 +69,7 @@ Change packing mode to "pom"
 ### Create Domain Module
 
 ```
-mvn archetype:generate -DgroupId=de.vidaee.roombookingsystem -DartifactId=roombookingsystem-domain \
+mvn archetype:generate -DgroupId=de.vidaee.roombookingsystem -DartifactId=room-booking-system-domain \
 -DinteractiveMode=false -Dversion=1.0.0-SNAPSHOT
 ```
 - delete auto generated files from main and src folder
@@ -78,7 +78,7 @@ mvn archetype:generate -DgroupId=de.vidaee.roombookingsystem -DartifactId=roombo
 ### Create Presentation Layer (REST API)
 
 ```
-mvn archetype:generate -DgroupId=de.vidaee.roombookingsystem -DartifactId=roombookingsystem-rest-api \
+mvn archetype:generate -DgroupId=de.vidaee.roombookingsystem -DartifactId=room-booking-system-presentation \
 -DinteractiveMode=false -Dversion=1.0.0-SNAPSHOT
 ```
 
@@ -92,9 +92,9 @@ cd roombookingsystem-rest-api
 mvn package spring-boot:repackage
 ```
 
-### Create Data Layer
+### Create Infrastructure
 ```
-mvn archetype:generate -DgroupId=de.vidaee.roombookingsystem -DartifactId=roombookingsystem-data \
+mvn archetype:generate -DgroupId=de.vidaee.roombookingsystem -DartifactId=room-booking-system-infrastructure \
 -DinteractiveMode=false -Dversion=1.0.0-SNAPSHOT
 ```
 
@@ -106,6 +106,13 @@ Run Project
 ```
 //root Folder
 java -jar roombookingsystem-rest-api/target/roombookingsystem-rest-api-1.0.0-SNAPSHOT.jar 
+```
+
+
+### Create Application Layer
+```
+mvn archetype:generate -DgroupId=de.vidaee.roombookingsystem -DartifactId=room-booking-system-application \
+-DinteractiveMode=false -Dversion=1.0.0-SNAPSHOT
 ```
 
 

@@ -28,5 +28,6 @@
     <module>room-booking-system-domain</module>
     <module>room-booking-system-presentation</module>
     <module>room-booking-system-infrastructure</module>
+    <module>room-booking-system-application</module>
   </modules>
 </project>

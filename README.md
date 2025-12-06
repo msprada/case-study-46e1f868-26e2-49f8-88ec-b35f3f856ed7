@@ -4,7 +4,7 @@ Table of Contents
 
 [1. Aufgabenstellung](#aufgabenstellung)
 
-## Aufgabenstellung
+## 1. Aufgabenstellung
 
 **Aufgabe**:
 Entwickle ein Backend für ein Raumbuchungssystem mit REST-Endpunkten.

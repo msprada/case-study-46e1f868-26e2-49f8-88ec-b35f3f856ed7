@@ -27,6 +27,6 @@
   <modules>
     <module>room-booking-system-domain</module>
     <module>room-booking-system-rest-api</module>
-    <module>room-booking-system-data</module>
+    <module>room-booking-system-infrastructure</module>
   </modules>
 </project>

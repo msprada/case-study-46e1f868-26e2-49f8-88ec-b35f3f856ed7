@@ -116,6 +116,20 @@ mvn archetype:generate -DgroupId=de.vidaee.roombookingsystem -DartifactId=room-b
 -DinteractiveMode=false -Dversion=1.0.0-SNAPSHOT
 ```
 
+### Activate OpenAI
+
+```
+    d<dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+      <version>3.0.0</version>
+    </dependency>
+
+```
+
+- swagger ui is available at /swagger-ui.html
+- swagger docs: /v3/api-docs
+
 
 #### Deps
 

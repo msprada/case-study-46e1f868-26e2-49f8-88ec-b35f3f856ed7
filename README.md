@@ -2,7 +2,16 @@
 
 Table of Contents
 
-[1. Aufgabenstellung](#aufgabenstellung)
+- [1. Aufgabenstellung](#1-aufgabenstellung)
+- [2. Setup Steps](#2-setup-steps)
+  - [2.1 Create Multimodule POM](#21-create-multimodule-pom-file)
+  - [2.2 Create Domain Layer](#22-create-domain-module)
+  - [2.3 Create Presentation Layer](#23-create-presentation-layer-rest-api)
+  - [2.4 Create Infrastructure Layer](#24-create-infrastructure)
+  - [2.5 Create Application Layer](#25-create-application-layer)
+  - [2.6 Activate Open API](#26-activate-openai)
+- [3. Run Project](#3-run-project)
+- [4. Dependencies](#4-deps)
 
 ## 1. Aufgabenstellung
 
@@ -36,9 +45,9 @@ Onion-Architecture
 ---
 
 
-## Setup Steps
+## 2. Setup Steps
 
-### Create Multimodule POM File
+### 2.1 Create Multimodule POM File
 
 ```
 mvn archetype:generate -DgroupId=de.vidaee.roombookingsystem -DartifactId=room-booking-system -DarchetypeArtifactId=maven-archetype-quickstart
@@ -67,7 +76,7 @@ Change packing mode to "pom"
     </dependency>
 ```
 
-### Create Domain Module
+### 2.2 Create Domain Module
 
 ```
 mvn archetype:generate -DgroupId=de.vidaee.roombookingsystem -DartifactId=room-booking-system-domain \
@@ -76,7 +85,7 @@ mvn archetype:generate -DgroupId=de.vidaee.roombookingsystem -DartifactId=room-b
 - delete auto generated files from main and src folder
 
 
-### Create Presentation Layer (REST API)
+### 2.3 Create Presentation Layer (REST API)
 
 ```
 mvn archetype:generate -DgroupId=de.vidaee.roombookingsystem -DartifactId=room-booking-system-presentation \
@@ -87,13 +96,13 @@ mvn archetype:generate -DgroupId=de.vidaee.roombookingsystem -DartifactId=room-b
 
 - use "https://start.spring.io" to create web rest package and merge files
 
-build sprin boot
+build spring boot
 ```
 cd roombookingsystem-rest-api
 mvn package spring-boot:repackage
 ```
 
-### Create Infrastructure
+### 2.4 Create Infrastructure
 ```
 mvn archetype:generate -DgroupId=de.vidaee.roombookingsystem -DartifactId=room-booking-system-infrastructure \
 -DinteractiveMode=false -Dversion=1.0.0-SNAPSHOT
@@ -102,21 +111,13 @@ mvn archetype:generate -DgroupId=de.vidaee.roombookingsystem -DartifactId=room-b
 - delete auto generated files from main and src folder
 
 
-Run Project
-
-```
-//root Folder
-java -jar roombookingsystem-rest-api/target/roombookingsystem-rest-api-1.0.0-SNAPSHOT.jar 
-```
-
-
-### Create Application Layer
+### 2.5 Create Application Layer
 ```
 mvn archetype:generate -DgroupId=de.vidaee.roombookingsystem -DartifactId=room-booking-system-application \
 -DinteractiveMode=false -Dversion=1.0.0-SNAPSHOT
 ```
 
-### Activate OpenAI
+### 2.6 Activate OpenAI
 
 ```
     d<dependency>
@@ -131,7 +132,24 @@ mvn archetype:generate -DgroupId=de.vidaee.roombookingsystem -DartifactId=room-b
 - swagger docs: /v3/api-docs
 
 
-#### Deps
+## 3. Run Project
+
+```
+//root Folder
+java -jar roombookingsystem-rest-api/target/roombookingsystem-rest-api-1.0.0-SNAPSHOT.jar 
+```
+
+or
+
+```
+//Presentation Folder
+
+mvn spring-boot:run
+```
+
+
+
+### 4. Deps
 
 vfox
 ─┬java

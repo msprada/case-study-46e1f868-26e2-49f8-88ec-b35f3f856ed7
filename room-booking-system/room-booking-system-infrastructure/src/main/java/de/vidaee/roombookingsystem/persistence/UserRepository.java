@@ -1,4 +1,4 @@
-package de.vidaee.roombookingsystem;
+package de.vidaee.roombookingsystem.persistence;
 
 
 import java.util.Arrays;

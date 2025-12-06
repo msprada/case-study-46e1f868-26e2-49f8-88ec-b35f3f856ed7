@@ -5,7 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
-
+import de.vidaee.roombookingsystem.entitities.*;
+import de.vidaee.roombookingsystem.repositories.IUserRepository;
 
 
 

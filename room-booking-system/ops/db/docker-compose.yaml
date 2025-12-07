@@ -1,0 +1,24 @@
+version: '2'
+services:
+  postgresql-room-booking-system:
+    hostname: localhost
+    image: docker.io/bitnami/postgresql:latest
+    ports:
+      - "5432:5432"
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - POSTGRESQL_USERNAME=postgres
+    volumes:
+      - 'postgresql_room_booking_data:/bitnami/postgresql'
+  p-gAdmin-room-booking-system:
+    image: dpage/pgadmin4
+    depends_on:
+      - postgresql-room-booking-system
+    ports:
+      - "5050:80"
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.de
+      - PGADMIN_DEFAULT_PASSWORD=admin
+volumes:
+  postgresql_room_booking_data:
+    driver: local

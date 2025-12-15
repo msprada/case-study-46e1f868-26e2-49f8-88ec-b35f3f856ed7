@@ -4,8 +4,13 @@ package de.vidaee.roombookingsystem.persistence;
 import java.util.Arrays;
 import java.util.List;
 
+
+
 import org.springframework.stereotype.Repository;
+
+
 import de.vidaee.roombookingsystem.entitities.*;
+import de.vidaee.roombookingsystem.persistence.entities.UserDao;
 import de.vidaee.roombookingsystem.repositories.IUserRepository;
 
 
@@ -13,9 +18,18 @@ import de.vidaee.roombookingsystem.repositories.IUserRepository;
 @Repository
 public class UserRepository implements IUserRepository {
 
+   private final IUserDaoPostgres dao;
+
+   public UserRepository(IUserDaoPostgres dao) {
+      this.dao= dao;
+   }
+
     @Override
   public List<User> list() {
-       return Arrays.asList(new User("John", "Smith"), new User("John", "Doe"));
+
+      List<UserDao> users = this.dao.findAll();
+
+     return Arrays.asList(new User("John", "Smith"), new User("John", "Doe"));
    }
 
    @Override

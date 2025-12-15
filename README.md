@@ -162,3 +162,7 @@ vfox
 ### vFox (versionFox)
 eval "$(vfox activate zsh)"
 
+
+```
+mvn clean flyway:migrate -Dflyway.configFiles=./src/main/java/de/vidaee/roombookingsystem/persistence/db/flyway.config
+```

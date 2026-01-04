@@ -5,6 +5,10 @@ public class User {
     private String firstname;
     private String lastname;
 
+    public User(){
+        
+    }
+
     public User(String firstname, String lastname) {
         super();
         this.lastname=lastname;
@@ -18,4 +22,9 @@ public class User {
     public String getName(){
         return this.firstname + this.lastname;
     }
+
+    public void setFirstname(String firstname){
+        this.firstname= firstname;
+    }   
+
 }

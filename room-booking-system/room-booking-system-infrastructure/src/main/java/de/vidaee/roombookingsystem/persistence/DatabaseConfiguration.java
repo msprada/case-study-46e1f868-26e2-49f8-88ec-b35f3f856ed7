@@ -1,11 +1,13 @@
 package de.vidaee.roombookingsystem.persistence;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import de.vidaee.roombookingsystem.persistence.services.MappingService;
 
 import java.util.Properties;
 
@@ -34,6 +36,20 @@ public class DatabaseConfiguration {
         return factory;
     }
 
+    @Bean
+    public ModelMapper modelMapperBean() {
+
+        ModelMapper mapper = new ModelMapper();
+        mapper.getConfiguration()
+                .setFieldMatchingEnabled(true)
+                .setFieldAccessLevel(org.modelmapper.config.Configuration.AccessLevel.PRIVATE);
+        return mapper;
+    }
+
+    @Bean
+    public MappingService mappingService() {
+        return new MappingService();
+    }
 
     private Properties additionalProperties() {
         Properties properties = new Properties();
@@ -41,7 +57,8 @@ public class DatabaseConfiguration {
         properties.setProperty("hibernate.ddl-auto", "update");
         properties.setProperty("jakarta.persistence.schema-generation.create-source=metadata", "true");
         properties.setProperty("jakarta.persistence.schema-generation.scripts.action", "create");
-        properties.setProperty("jakarta.persistence.schema-generation.scripts.create-target", "create-database-autogen.sql");
+        properties.setProperty("jakarta.persistence.schema-generation.scripts.create-target",
+                "create-database-autogen.sql");
         return properties;
     }
 

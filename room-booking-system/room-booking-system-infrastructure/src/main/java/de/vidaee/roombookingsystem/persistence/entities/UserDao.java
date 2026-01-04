@@ -18,4 +18,8 @@ public class UserDao {
     @Column()
     private String name;
 
+    public String getFirstname(){
+        return this.name;
+    }
+
 }

@@ -41,7 +41,7 @@ public class DatabaseConfiguration {
         properties.setProperty("hibernate.ddl-auto", "update");
         properties.setProperty("jakarta.persistence.schema-generation.create-source=metadata", "true");
         properties.setProperty("jakarta.persistence.schema-generation.scripts.action", "create");
-        properties.setProperty("jakarta.persistence.schema-generation.scripts.create-target", "create.sql");
+        properties.setProperty("jakarta.persistence.schema-generation.scripts.create-target", "create-database-autogen.sql");
         return properties;
     }
 
